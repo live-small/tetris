@@ -1,7 +1,7 @@
 import { row, makeRows } from './table.mjs';
 import { $score, score } from '../dom/dom.mjs';
 import { makeBlock } from '../block/render.mjs';
-import { changeDirection, moveBlock } from '../event/event.mjs';
+import { changeDirection, moveBlock, bindingSpeed } from '../event/event.mjs';
 
 
 
@@ -27,6 +27,8 @@ document.addEventListener("keydown", (e) => {
             return moveBlock('width', 1, e.code);
         case "ArrowUp":
             return changeDirection();
+        case "Space":
+            return bindingSpeed(5);
         default:
             alert(`This key is not available, ${e.code}`);
         // 1초간 보였다가 사라지게 구현** -> 사용자 불편 ux

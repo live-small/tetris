@@ -1,6 +1,7 @@
 import Blocks from '../block/block.mjs';
 import { getRandom } from './random.mjs'
 import { fixBlock } from './fix.mjs';
+import { bindingSpeed } from '../event/event.mjs';
 import { tempBlock, originBlock, blockState, changeTempBlock } from './state.mjs';
 import { $player, searchClass, checkAvailable, controlClass } from '../dom/dom.mjs';
 
@@ -14,6 +15,7 @@ export function makeBlock() {
     originBlock.width = 3;
     changeTempBlock(originBlock);
     // tempBlock = { ...originBlock }; // 모듈시스템때문에 변수가 상수로 작동하는 에러 ** 
+    bindingSpeed();
     renderBlock();
 }
 

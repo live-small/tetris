@@ -8,3 +8,32 @@ td {
   height: 25px;
   padding: 0px;
 }
+
+/* block */
+.tree {
+  background: #ffadad;
+}
+
+.square {
+  background: #ffd6a5;
+}
+
+.zRight {
+  background: #ffc6ff;
+}
+
+.zLeft {
+  background: #caffbf;
+}
+
+.LRight {
+  background: #9bf6ff;
+}
+
+.LLeft {
+  background: #a0c4ff;
+}
+
+.bar {
+  background: #bdb2ff;
+}

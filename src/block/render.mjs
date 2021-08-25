@@ -1,5 +1,6 @@
 import Blocks from '../block/block.mjs';
 import { getRandom } from './random.mjs'
+import { fixBlock } from './fix.mjs';
 import { tempBlock, originBlock, blockState, changeTempBlock } from './state.mjs';
 import { $player, searchClass, checkAvailable, controlClass } from '../dom/dom.mjs';
 

@@ -16,7 +16,6 @@ export function checkAvailable(target) {
     return true;
 }
 
-
 export function controlClass(target, deleteElem, addElem = null) {
     $player.querySelectorAll(`.${target}`).forEach((v) => {
         if (typeof deleteElem === 'object') {
@@ -28,4 +27,8 @@ export function controlClass(target, deleteElem, addElem = null) {
             v.classList.add(addElem);
         }
     })
+}
+
+export function updateScore() {
+    $score.innerText = ++score;
 }

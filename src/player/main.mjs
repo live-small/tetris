@@ -1,12 +1,17 @@
 import { row, makeRows } from './table.mjs';
-import { $score, score } from '../dom/dom.mjs';
+import { $score, score, $startBtn, $gameStart } from '../dom/dom.mjs';
 import { makeBlock } from '../block/render.mjs';
 import { changeDirection, moveBlock, bindingSpeed } from '../event/event.mjs';
 
 
 
 // Executor 
-startTetris();
+$startBtn.addEventListener('click', () => {
+    $gameStart.childNodes.forEach(elem => {
+        elem.nodeType !== 3 ? elem.style.display = 'none' : ''; // nodeType = 3(text)
+    });
+    startTetris();
+});
 
 function startTetris() {
     $score.innerText = score;

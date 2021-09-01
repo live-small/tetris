@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <title>Tetris</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./src/player/main.mjs" type="module"></script>
 </head>
 <body>
-    <div id="score"></div>
+    <div id="gameStart">
+        <span id="greeting">테트리스 해볼래?</span>
+        <div id="start">START</div>
+    </div>
     <main>
+        <div id="score"></div>
         <table id="player"></table>
     </main>
 </body>

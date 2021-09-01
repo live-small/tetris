@@ -3,6 +3,8 @@ import { blockState } from '../block/state.mjs';
 
 export const $player = document.getElementById('player');
 export const $score = document.getElementById('score');
+export const $startBtn = document.getElementById('start');
+export const $gameStart = document.getElementById('gameStart');
 export let score = 0;
 
 export function searchClass(target) {

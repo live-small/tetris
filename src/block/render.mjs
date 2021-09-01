@@ -14,7 +14,6 @@ export function makeBlock() {
     originBlock.height = 0;
     originBlock.width = 3;
     changeTempBlock(originBlock);
-    // tempBlock = { ...originBlock }; // 모듈시스템때문에 변수가 상수로 작동하는 에러 ** 
     bindingSpeed();
     renderBlock();
 }
@@ -35,7 +34,6 @@ export function renderBlock(keyName = '') {
         if (!checkAvailable(targetBlock)) {
             // 정상작동 불가능할 경우 
             changeTempBlock(originBlock); // 이전값으로 돌리기
-            // tempBlock = { ...originBlock }; 
             setTimeout(() => {
                 renderBlock();
                 if (keyName === 'ArrowDown') {

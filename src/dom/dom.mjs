@@ -6,6 +6,7 @@ export const $score = document.getElementById('score');
 export const $startBtn = document.getElementById('start');
 export const $gameStart = document.getElementById('gameStart');
 export const $gameOver = document.getElementById('gameOver');
+export const $gapControl = document.getElementById('gapControl')
 export let score = 0;
 
 export function searchClass(target) {

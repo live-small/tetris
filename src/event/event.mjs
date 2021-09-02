@@ -1,5 +1,5 @@
 import Blocks from '../block/block.mjs';
-// import { score } from '../dom/dom.mjs';
+import { score, $gapControl, $player } from '../dom/dom.mjs';
 import { tempBlock } from '../block/state.mjs';
 import { renderBlock } from '../block/render.mjs';
 
@@ -50,3 +50,12 @@ document.addEventListener("keydown", (e) => {
         // 1초간 보였다가 사라지게 구현** -> 사용자 불편 ux
     }
 });
+
+
+/* 간격조절 설정 - 테트리스 다른 버전 느낌날 수 있게 */
+const controlBtn = $gapControl.childNodes[3];
+controlBtn.addEventListener('click', () => {
+    let test = $player.style.borderCollapse;
+    test = test === 'collapse' ? 'separate' : 'collapse';
+    $player.style.borderCollapse = test;
+})

@@ -1,5 +1,5 @@
 import { row, makeRows } from './table.mjs';
-import { $score, score, $startBtn, $gameStart } from '../dom/dom.mjs';
+import { $score, score, $startBtn, $gameStart, $gapControl } from '../dom/dom.mjs';
 import { makeBlock } from '../block/render.mjs';
 
 
@@ -9,6 +9,7 @@ $startBtn.addEventListener('click', () => {
     $gameStart.childNodes.forEach(elem => {
         elem.nodeType !== 3 ? elem.style.display = 'none' : ''; // nodeType = 3(text)
     });
+    $gapControl.style.display = 'flex';
     startTetris();
 });
 

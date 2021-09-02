@@ -20,7 +20,7 @@ export function moveBlock(property, amount, keyName) {
 }
 
 export function bindingSpeed(speed = movingSpeed) {
-    clearInterval(timerId);
+    clearTimeout(timerId);
     timerId = setTimeout(function repeat() {
         moveBlock('height', 1, 'ArrowDown');
         // if (score !== 0 && score % 5 === 0) { speed = fasterSpeed(); }

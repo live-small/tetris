@@ -36,12 +36,14 @@ export function renderBlock(keyName = '') {
             // 정상작동 불가능할 경우 
             changeTempBlock(originBlock); // 이전값으로 돌리기
             setTimeout(() => {
-                renderBlock('reRender');
                 if (keyName === 'reRender') {
                     clearTimeout(timerId);
                     gameOver();
+                } else {
+                    renderBlock('reRender');
+                    if (keyName === 'ArrowDown') { fixBlock(); }
                 }
-                else if (keyName === 'ArrowDown') { fixBlock(); }
+                console.log(keyName);
             }, 0);
             return false;
         }

@@ -32,6 +32,14 @@ export function controlClass(target, deleteElem, addElem = null) {
     })
 }
 
+export function initScore() {
+    score = 0;
+}
+
 export function updateScore() {
     $score.innerText = ++score;
+}
+
+export function removeTable() {
+    $player.innerHTML = "";
 }

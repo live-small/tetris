@@ -1,7 +1,8 @@
 import Blocks from '../block/block.mjs';
 import { getRandom } from './random.mjs'
 import { fixBlock } from './fix.mjs';
-import { bindingSpeed } from '../event/event.mjs';
+import { bindingSpeed, timerId } from '../event/event.mjs';
+import { gameOver } from '../player/endGame.mjs';
 import { tempBlock, originBlock, blockState, changeTempBlock } from './state.mjs';
 import { $player, searchClass, checkAvailable, controlClass } from '../dom/dom.mjs';
 
@@ -35,10 +36,12 @@ export function renderBlock(keyName = '') {
             // 정상작동 불가능할 경우 
             changeTempBlock(originBlock); // 이전값으로 돌리기
             setTimeout(() => {
-                renderBlock();
-                if (keyName === 'ArrowDown') {
-                    fixBlock();
+                renderBlock('reRender');
+                if (keyName === 'reRender') {
+                    clearTimeout(timerId);
+                    gameOver();
                 }
+                else if (keyName === 'ArrowDown') { fixBlock(); }
             }, 0);
             return false;
         }

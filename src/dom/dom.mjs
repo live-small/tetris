@@ -5,6 +5,7 @@ export const $player = document.getElementById('player');
 export const $score = document.getElementById('score');
 export const $startBtn = document.getElementById('start');
 export const $gameStart = document.getElementById('gameStart');
+export const $gameOver = document.getElementById('gameOver');
 export let score = 0;
 
 export function searchClass(target) {
